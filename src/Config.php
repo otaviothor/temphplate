@@ -1,11 +1,14 @@
 <?php
 
+/**
+ * Constant about project
+ */
 define("SITE", [
-  "name" => "Auth em MVC com PHP",
-  "desc" => "Aprenda a construir uma aplicação de autenticação em MVC com PHP do Jeito Certo!",
-  "domain" => "localauth.com",
+  "name" => "Template de estrutura MVC para projeto em PHP",
+  "desc" => "Um template estruturado em MVC parap projetos em profissionais em PHP",
+  "domain" => "template-mvc.com",
   "locale" => "pt_BR",
-  "root" => "http://localhost/codigo-aberto"
+  "root" => "http://localhost/template-mvc"
 ]);
 
 if($_SERVER["SERVER_NAME"] === "localhost") {
@@ -13,7 +16,7 @@ if($_SERVER["SERVER_NAME"] === "localhost") {
 }
 
 /**
- *
+ * Constant for database configuration
  */
 define('DATA_LAYER_CONFIG', [
   "driver" => "mysql",

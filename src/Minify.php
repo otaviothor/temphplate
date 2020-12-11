@@ -4,14 +4,14 @@ use MatthiasMullie\Minify\CSS;
 use MatthiasMullie\Minify\JS;
 
 /**
- * CSS
+ * CSS minifier
  */
 $minCSS = new CSS();
 $minCSS->add(dirname(__DIR__, 1) . "/views/assets/css/style.css");
 $minCSS->minify(dirname(__DIR__, 1) . "/views/assets/style.min.css");
 
 /**
- * JS
+ * JS minifier
  */
 $minJS = new JS();
 $minJS->add(dirname(__DIR__, 1) . "/views/assets/js/scripts.js");

@@ -10,6 +10,9 @@ use CoffeeCode\Router\Router;
 $router = new Router(site());
 $router->namespace("Src\Controllers");
 
+/**
+ * Routes
+ */
 $router->group(null);
 $router->get("/", "WebController:index", "web.index");
 $router->get("/novo", "WebController:create", "web.create");
@@ -19,6 +22,9 @@ $router->get("/{id}/editar", "WebController:edit", "web.edit");
 $router->put("/{id}/update", "WebController:update", "web.update");
 $router->delete("/{id}", "WebController:destroy", "web.destroy");
 
+/**
+ * Route errors
+ */
 $router->group("ops");
 $router->get("/", "WebController:error");
 

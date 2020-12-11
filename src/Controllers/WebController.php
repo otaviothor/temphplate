@@ -2,65 +2,84 @@
 
 namespace Src\Controllers;
 
+/**
+ * Class WebController
+ * @package Src\Controllers
+ */
 class WebController extends Controller
 {
+  /**
+   * WebController constructor.
+   * @param $router
+   */
   public function __construct($router)
   {
     parent::__construct($router);
   }
 
+
   /**
-   * Display a listing of the resource.
+   * Display a listing of the resource
    */
-  public function index()
+  public function index(): void
   {
-    echo $this->view->render("home");
+    echo $this->view->render("home", [
+      "title" => "Home"
+    ]);
   }
 
   /**
-   * Show the form for creating a new resource.
+   * Show the form for creating a new resource
    */
-  public function create()
-  {
-      
-  }
-
-  /**
-   * Store a newly created resource in storage.
-   */
-  public function store(array $data)
+  public function create(): void
   {
 
   }
 
   /**
-   * Display the specified resource.
+   * Store a newly created resource in storage
+   * @param array $data
    */
-  public function show(array $data)
+  public function store(array $data): void
+  {
+
+  }
+
+
+  /**
+   * Display the specified resource
+   * @param array $data
+   */
+  public function show(array $data): void
+  {
+
+  }
+
+
+  /**
+   * Show the form for editing the specified resource
+   * @param array $data
+   */
+  public function edit(array $data): void
+  {
+
+  }
+
+
+  /**
+   * Update the specified resource in storage
+   * @param array $data
+   */
+  public function update(array $data): void
   {
 
   }
 
   /**
-   * Show the form for editing the specified resource.
+   * Remove the specified resource from storage
+   * @param array $data
    */
-  public function edit(array $data)
-  {
-
-  }
-
-  /**
-   * Update the specified resource in storage.
-   */
-  public function update(array $data)
-  {
-
-  }
-
-  /**
-   * Remove the specified resource from storage.
-   */
-  public function destroy(array $data)
+  public function destroy(array $data): void
   {
 
   }
