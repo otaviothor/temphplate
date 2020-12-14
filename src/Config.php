@@ -40,8 +40,8 @@ define("MAIL", [
   "host" => "smtp.gmail.com",
   "port" => "587",
   "user" => "",
-  "passwd" => "",
-  "from_name" => "",
-  "from_email" => ""
+  "passwd" => "******",
+  "from_name" => "Seu Nome Completo",
+  "from_email" => "seuemail@dominio.com"
 ]);
 

@@ -23,7 +23,7 @@ class WebController extends Controller
    */
   public function index(): void
   {
-    echo $this->view->render("home", [
+    echo $this->view->render("site/home", [
       "title" => "Home"
     ]);
   }
