@@ -32,3 +32,15 @@ define('DATA_LAYER_CONFIG', [
     PDO::ATTR_CASE => PDO::CASE_NATURAL
   ]
 ]);
+
+/**
+ * Constant for email configuration
+ */
+define("MAIL", [
+    "host" => "smtp.gmail.com",
+    "port" => "587",
+    "user" => "",
+    "passwd" => "",
+    "from_name" => "",
+    "from_email" => ""
+]);
