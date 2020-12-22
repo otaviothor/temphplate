@@ -12,24 +12,16 @@ use stdClass;
  */
 class Email
 {
-  /**
-   * @var PHPMailer
-   */
+  /** @var PHPMailer */
   private $mail;
 
-  /**
-   * @var stdClass
-   */
+  /** @var stdClass */
   private $data;
 
-  /**
-   * @var
-   */
+  /** @var Exception|null */
   private $error;
 
-  /**
-   * Email constructor.
-   */
+  /** Email constructor. */
   public function __construct()
   {
     $this->mail = new PHPMailer(true);
@@ -103,9 +95,7 @@ class Email
     }
   }
 
-  /**
-   * @return Exception|null
-   */
+  /** @return Exception|null */
   public function error(): ?Exception
   {
     return $this->error;

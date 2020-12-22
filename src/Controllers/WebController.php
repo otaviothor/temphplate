@@ -17,10 +17,7 @@ class WebController extends Controller
     parent::__construct($router);
   }
 
-
-  /**
-   * Display a listing of the resource
-   */
+  /** Display a listing of the resource */
   public function index(): void
   {
     echo $this->view->render("home", [
@@ -28,9 +25,7 @@ class WebController extends Controller
     ]);
   }
 
-  /**
-   * Show the form for creating a new resource
-   */
+  /** Show the form for creating a new resource */
   public function create(): void
   {
 

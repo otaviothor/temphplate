@@ -1,23 +1,20 @@
 <?php
 
-/**
- * Constant about project
- */
+/** Constant with info about project */
 define("SITE", [
   "name" => "Template de estrutura MVC para projeto em PHP",
-  "desc" => "Um template estruturado em MVC parap projetos em profissionais em PHP",
+  "desc" => "Um template estruturado em MVC para projetos em profissionais em PHP",
   "domain" => "template-mvc.com",
   "locale" => "pt_BR",
   "root" => "http://localhost/template-mvc"
 ]);
 
+/** Verification if project is under development to minify assets */
 if($_SERVER["SERVER_NAME"] === "localhost") {
   require __DIR__."/Minify.php";
 }
 
-/**
- * Constant for database configuration
- */
+/** Constant for database configuration */
 define('DATA_LAYER_CONFIG', [
   "driver" => "mysql",
   "host" => "localhost",
@@ -33,9 +30,7 @@ define('DATA_LAYER_CONFIG', [
   ]
 ]);
 
-/**
- * Constant for email configuration
- */
+/** Constant for email configuration */
 define("MAIL", [
     "host" => "smtp.gmail.com",
     "port" => "587",
