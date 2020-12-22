@@ -4,3 +4,6 @@
 .env
 npm-debug.log
 yarn-error.log
+composer.lock
+yarn.lock
+package-lock.json

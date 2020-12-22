@@ -2,6 +2,7 @@
 
 namespace Src\Controllers;
 
+use CoffeeCode\Router\Router;
 use League\Plates\Engine;
 
 /**
@@ -10,14 +11,10 @@ use League\Plates\Engine;
  */
 abstract class Controller
 {
-  /**
-   * @var Engine
-   */
+  /** @var Engine */
   protected $view;
 
-  /**
-   * @var
-   */
+  /** @var Router */
   protected $router;
 
   /**
@@ -29,5 +26,15 @@ abstract class Controller
     $this->router = $router;
     $this->view = Engine::create(dirname(__DIR__, 2) . "/views", 'php');
     $this->view->addData(["router" => $this->router]);
+  }
+
+  /**
+   * @param string $param
+   * @param array $values
+   * @return string
+   */
+  public function ajaxResponse(string $param, array $values): string
+  {
+    return json_encode([$param => $values]);
   }
 }
