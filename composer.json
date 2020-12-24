@@ -18,6 +18,11 @@
       "src/Helpers.php"
     ]
   },
+  "scripts": {
+    "post-install-cmd": [
+      "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+    ]
+  },
   "require": {
     "coffeecode/router": "1.0.7",
     "coffeecode/datalayer": "1.1.4",
