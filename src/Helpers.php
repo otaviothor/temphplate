@@ -27,3 +27,13 @@ function asset(string $path, $time = true): string
   }
   return $file;
 }
+
+/**
+ * @param string $path
+ * @return string
+ */
+function package(string $path): string
+{
+  $package = SITE["root"] . "/node_modules/{$path}";
+  return $package;
+}
