@@ -1,4 +1,4 @@
-<?php $v->layout("site/_theme"); ?>
+<?php $v->layout("_theme"); ?>
 
 <p>
   <?= site(); ?>

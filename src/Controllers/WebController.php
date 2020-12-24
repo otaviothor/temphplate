@@ -78,4 +78,13 @@ class WebController extends Controller
   {
 
   }
+
+  /**
+   * Show error page with error code
+   * @param array $data
+   */
+  public function error(array $data): void
+  {
+
+  }
 }
