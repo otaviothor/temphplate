@@ -1,4 +1,4 @@
-# Template de estrutura MVC para projeto em PHP
+# Template de estrutura MVC para projetos em PHP
 Esse projeto serve como um template em MVC para o desenvolvimentos de projetos em PHP de alto nível.
 
 # Estrutura
