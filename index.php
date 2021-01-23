@@ -23,7 +23,7 @@ $router->delete("/{id}", "WebController:destroy", "web.destroy");
 
 /** Route errors */
 $router->group("ops");
-$router->get("/{errcode}", "WebController:error");
+$router->get("/{errcode}", "WebController:error", "web.error");
 
 /** Route proccess */
 $router->dispatch();
