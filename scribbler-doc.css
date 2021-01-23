@@ -8,7 +8,7 @@ body {
 /* layout */
 .header {
   border-bottom: 1px solid var(--code-bg-color);
-  grid-template-columns: 1fr 175px 60% 1fr;
+  grid-template-columns: 1fr 190px 60% 1fr;
 }
 
 .wrapper {
@@ -30,7 +30,6 @@ body {
 
 /* menu */
 .menu {
-  grid-template-columns: 1fr 180px 60% 1fr;
 }
 
 .menu__item {

@@ -16,7 +16,7 @@
 <body>
   <div class="doc__bg"></div>
   <nav class="header">
-    <h1 class="logo">temPHPlate <span class="logo__thin">doc</span></h1>
+    <h1 class="logo">temPHPlate <span class="logo__thin">docs</span></h1>
     <ul class="menu">
       <div class="menu__item toggle"><span></span></div>
       <li class="menu__item"><a href="index.html" class="link link--dark"><i class="fa fa-home"></i> home</a>
@@ -46,16 +46,16 @@
         <p>temPHPlate is a template structured in MVC with simplified syntax and easily to use for high-level project
           development.</p>
         <p>this template provides a structure and starting point for creating your application, allowing you to focus on
-          creating
-          something amazing while we sweat the details.</p>
+          creating something amazing while we sweat the details.</p>
         <p>temPHPlate strives to provide a great developer experience, while providing various features such as thorough
-          dependency
-          injection, an expressive database abstraction layer, a view manipulation system, and more.</p>
+          dependency injection, an expressive database abstraction layer, a view manipulation system, and more</p>
+        <hr />
       </section>
       <section class="js-section">
         <h3 class="section__title"># installation</h3>
-        <h3 class="section__title">installation via composer</h3>
-        <p>if your computer already has PHP and Composer installed, you may create a new temPHPlate project by using Composer directly.</p>
+        <h4 class="section__title">installation via composer</h4>
+        <p>if your computer already has PHP and Composer installed, you may create a new temPHPlate project by using
+          Composer directly.</p>
         <div class="code__block code__block--notabs">
           <pre class="code code--block">
             <code>
@@ -63,14 +63,14 @@
             </code>
           </pre>
         </div>
-        <h3 class="section__title">installation via github</h3>
+        <h4 class="section__title">installation via github</h4>
         <p>Or, you can start a temPHPlate project cloning from github, just have the git CLI installed.</p>
         <pre class="code code--block">
           <code>
             $ git clone https://github.com/otaviothor/temphplate your-project-name
           </code>
         </pre>
-        <table id="customers">
+        <!-- <table id="customers">
           <tr>
             <th>Options</th>
             <th>Value</th>
@@ -91,15 +91,98 @@
             <td>Render table with Scribbler’s pretty table style.</td>
             <td>true</td>
           </tr>
-        </table>
+        </table> -->
         <hr />
       </section>
       <section class="js-section">
-        <h3 class="section__title">configuration</h3>
-        <p>Lorem ipsum dolor sit amet, scripta tibique indoctum sit ei, mel inani aeterno ad. Facer oratio ex per. At
-          eam movet verear, in sea brute patrioque disputando, usu nonumes torquatos an. Ex his quaerendum intellegebat,
-          ut vel homero accusam. Eum at debet tibique, in vocibus temporibus adversarium sed. Porro verear eu vix, ne
-          usu tation vituperata.</p>
+        <h3 class="section__title"># configuration</h3>
+        <p>the project configuration for the temPHPlate it is in the file <span
+            class="code code--inline">src/Config.php</span>. this configuration file allow you to configure things like
+          your database connection information, your mail server information, as well as various other configuration.
+        </p>
+        <h4 class="section__title">environment configuration</h4>
+        <p>To make this a cinch, temPHPlate utilizes the <a href="https://github.com/vlucas/phpdotenv"
+            class="link link--light" target="_blank">DotEnv</a> PHP library. in a fresh temPHPlate installation, the
+          root directory of your application will contain a called <span class="code code--inline">.env.example</span>
+          file that defines many common environment variables. during the installation process, this file will
+          automatically be copied to <span class="code code--inline">.env</span>, which is not normally sent to the
+          hosting environment because it is a file with sensible information.</p>
+
+        <table id="customers">
+          <tr>
+            <th>variables</th>
+            <th>description</th>
+          </tr>
+          <tr>
+            <td>APP_NAME</td>
+            <td>name of your project</td>
+          </tr>
+          <tr>
+            <td>APP_DESCRIPTION</td>
+            <td>description of your project</td>
+          </tr>
+          <tr>
+            <td>APP_DOMAIN</td>
+            <td>domain that your project will have after being hosted</td>
+          </tr>
+          <tr>
+            <td>APP_LOCALE</td>
+            <td>location where your project will be available</td>
+          </tr>
+          <tr>
+            <td>APP_ROOT</td>
+            <td>root url of your project</td>
+          </tr>
+          <tr>
+            <td>DB_DRIVER</td>
+            <td>database driver used in the project</td>
+          </tr>
+          <tr>
+            <td>DB_HOST</td>
+            <td>database host used in the project</td>
+          </tr>
+          <tr>
+            <td>DB_PORT</td>
+            <td>database port used in the project</td>
+          </tr>
+          <tr>
+            <td>DB_DATABASE</td>
+            <td>database name used in the project</td>
+          </tr>
+          <tr>
+            <td>DB_USERNAME</td>
+            <td>database username used in the project</td>
+          </tr>
+          <tr>
+            <td>DB_PASSWORD</td>
+            <td>database password used in the project</td>
+          </tr>
+          <tr>
+            <td>MAIL_HOST</td>
+            <td>e-mail host used in the project</td>
+          </tr>
+          <tr>
+            <td>MAIL_PORT</td>
+            <td>e-mail port used in the project</td>
+          </tr>
+          <tr>
+            <td>MAIL_USERNAME</td>
+            <td>e-mail username used in the project</td>
+          </tr>
+          <tr>
+            <td>MAIL_PASSWORD</td>
+            <td>e-mail password used in the project</td>
+          </tr>
+          <tr>
+            <td>MAIL_FROM_NAME</td>
+            <td>name of the sender's email address used in the project</td>
+          </tr>
+          <tr>
+            <td>MAIL_FROM_ADDRESS</td>
+            <td>sender's email address used in the project</td>
+          </tr>
+
+        </table>
         <hr />
       </section>
       <section class="js-section">
