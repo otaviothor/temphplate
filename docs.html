@@ -107,7 +107,11 @@
           file that defines many common environment variables. during the installation process, this file will
           automatically be copied to <span class="code code--inline">.env</span>, which is not normally sent to the
           hosting environment because it is a file with sensible information.</p>
+          <p>temPHPlate's default .env file contains basics variables ​​that may differ based on whether your application is running
+          locally or on a production web server. these values ​​can be used through the global variables <span class="code code--inline">$_ENV['NAME_OF_YOUR_VARIABLE']</span>
+           and <span class="code code--inline">$_SERVER['NAME_OF_YOUR_VARIABLE']</span>, or through function <span class="code code--inline">getenv('NAME_OF_YOUR_VARIABLE')</span>.</p>
 
+        <h4 class="section__title">basics variables</h4>
         <table id="customers">
           <tr>
             <th>variables</th>
@@ -181,7 +185,6 @@
             <td>MAIL_FROM_ADDRESS</td>
             <td>sender's email address used in the project</td>
           </tr>
-
         </table>
         <hr />
       </section>
