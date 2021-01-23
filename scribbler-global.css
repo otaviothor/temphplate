@@ -1,32 +1,34 @@
 /* css variables*/
 :root {
-  --primary-color: #432E30;
-  --primary-color-light: #8E7474;
-  --accent-color: #FE6A6B;
-  --accent-color-light: #FFE4E4;
-  --accent-color-dark: #B94B4C;
-  --white-color: #FAFBFC;
-  --light-gray-color: #C6CBD1;
-  --medium-gray-color: #959DA5;
-  --dark-gray-color: #444D56; 
-  --bg-color: #F8F8FA;
-  --code-bg-color: #F0E8E8;
+  --primary-color: #432e30;
+  --primary-color-light: #8e7474;
+  --accent-color: #fe6a6b;
+  --accent-color-light: #ffe4e4;
+  --accent-color-dark: #b94b4c;
+  --white-color: #fafbfc;
+  --light-gray-color: #c6cbd1;
+  --medium-gray-color: #959da5;
+  --dark-gray-color: #444d56;
+  --bg-color: #f8f8fa;
+  --code-bg-color: #f0e8e8;
 }
 
 /* normalized */
-html, body {
+html,
+body {
   padding: 0;
   margin: 0;
-  font-family: 'Ubuntu', sans-serif;
+  font-family: "Ubuntu", sans-serif;
   background-color: white;
 }
 
 p {
   font-weight: 300;
-  color: #4A4A4A;
+  color: #4a4a4a;
 }
 
-a, a:hover {
+a,
+a:hover {
   text-decoration: none;
   color: var(--primary-color);
 }
@@ -91,7 +93,8 @@ hr {
 /* code */
 .code {
   border-radius: 3px;
-  font-family: Space Mono, SFMono-Regular, Menlo,Monaco, Consolas, Liberation Mono, Courier New, monospace;
+  font-family: Space Mono, SFMono-Regular, Menlo, Monaco, Consolas,
+    Liberation Mono, Courier New, monospace;
   background: var(--bg-color);
   border: 1px solid var(--code-bg-color);
   color: var(--primary-color-light);
@@ -115,7 +118,7 @@ hr {
   position: relative;
   text-decoration: none;
   border: 0;
-  transition: all .3s ease-out;
+  transition: all 0.3s ease-out;
 }
 
 .button--primary:after {
@@ -132,7 +135,8 @@ hr {
 .button--primary:hover {
   text-shadow: 0px 1px 1px var(--accent-color-dark);
   color: white;
-  transform: translate3D(0, -3px, 0);
+  box-shadow: 0 2px 2px 0 rgb(0 0 0 / 14%), 0 3px 1px -2px rgb(0 0 0 / 12%),
+    0 1px 5px 0 rgb(0 0 0 / 20%);
 }
 
 .button--primary:hover::after {
@@ -189,7 +193,7 @@ nav {
 .toggle span,
 .toggle span:before,
 .toggle span:after {
-  content: '';
+  content: "";
   position: absolute;
   height: 2px;
   width: 18px;
@@ -209,7 +213,7 @@ nav {
   bottom: -6px;
 }
 
-.toggle.open span{
+.toggle.open span {
   background-color: transparent;
 }
 
@@ -239,11 +243,12 @@ nav {
 table {
   border-collapse: collapse;
   width: 100%;
-  transition: color .3s ease-out;
+  transition: color 0.3s ease-out;
   margin-bottom: 2rem;
 }
 
-table td, table th {
+table td,
+table th {
   border: 1px solid var(--code-bg-color);
   padding: 0.8rem;
   font-weight: 300;
@@ -266,7 +271,7 @@ table td:first-child {
     grid-template-columns: 70px auto;
   }
 
-  .menu__item{
+  .menu__item {
     display: none;
   }
 
@@ -305,9 +310,9 @@ table td:first-child {
 @keyframes fadeUp {
   0% {
     opacity: 0;
-    transform: translate3d(0,30px,0);
+    transform: translate3d(0, 30px, 0);
   }
   100% {
-    transform: translate3d(0,0,0);
+    transform: translate3d(0, 0, 0);
   }
 }
