@@ -12,7 +12,7 @@ nav {
 }
 
 .hero__title {
-  font-weight: 900;
+  font-weight: 700;
   color: var(--primary-color);
 }
 
@@ -66,7 +66,7 @@ nav {
 
 .changelog__meta small {
   color: var(--primary-color-light);
-  font-weight: 200;
+  font-weight: 300;
   letter-spacing: 1px;
 }
 
