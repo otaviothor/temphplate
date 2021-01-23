@@ -14,10 +14,10 @@ $router->namespace("Src\Controllers");
 /** Routes */
 $router->group(null);
 $router->get("/", "WebController:index", "web.index");
-$router->get("/novo", "WebController:create", "web.create");
+$router->get("/new", "WebController:create", "web.create");
 $router->post("/store", "WebController:store", "web.store");
 $router->get("/{id}", "WebController:show", "web.show");
-$router->get("/{id}/editar", "WebController:edit", "web.edit");
+$router->get("/{id}/edit", "WebController:edit", "web.edit");
 $router->put("/{id}/update", "WebController:update", "web.update");
 $router->delete("/{id}", "WebController:destroy", "web.destroy");
 
