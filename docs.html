@@ -16,7 +16,7 @@
 <body>
   <div class="doc__bg"></div>
   <nav class="header">
-    <h1 class="logo">temPHPlate <span class="logo__thin">docs</span></h1>
+    <h1 class="logo"><a href="index.html">temPHPlate <span class="logo__thin">docs</span></a></h1>
     <ul class="menu">
       <div class="menu__item toggle"><span></span></div>
       <li class="menu__item"><a href="index.html" class="link link--dark"><i class="fa fa-home"></i> home</a>
@@ -101,7 +101,7 @@
           your database connection information, your mail server information, as well as various other configuration.
         </p>
         <h4 class="section__title">environment configuration</h4>
-        <p>To make this a cinch, temPHPlate utilizes the <a href="https://github.com/vlucas/phpdotenv"
+        <p>To make this easier, temPHPlate uses the <a href="https://github.com/vlucas/phpdotenv"
             class="link link--light" target="_blank">DotEnv</a> PHP library. in a fresh temPHPlate installation, the
           root directory of your application will contain a called <span class="code code--inline">.env.example</span>
           file that defines many common environment variables. during the installation process, this file will
@@ -189,40 +189,59 @@
         <hr />
       </section>
       <section class="js-section">
-        <h3 class="section__title">routing</h3>
-        <p>Lorem ipsum dolor sit amet, scripta tibique indoctum sit ei, mel inani aeterno ad. Facer oratio ex per. At
-          eam movet verear, in sea brute patrioque disputando, usu nonumes torquatos an. Ex his quaerendum intellegebat,
-          ut vel homero accusam. Eum at debet tibique, in vocibus temporibus adversarium sed. Porro verear eu vix, ne
-          usu tation vituperata.</p>
+        <h3 class="section__title"># routing</h3>
+        <p>To make this easier, temPHPlate uses the <a href="https://github.com/robsonvleite/router" class="link link--light"
+            target="_blank">Router</a> PHP library. in a new temPHPlate installation, your application's root directory will contain a file called <span class="code code--inline">index.php</span> which will be
+            your project's start file. it should contain all the routes used in your project.</p>
+        <h4 class="section__title">basic structure</h4>
+        <div class="code__block code__block--notabs">
+          <pre class="code code--block">
+            <code>
+              $router->verb('uri', 'controller:method', 'route.name');
+            </code>
+          </pre>
+        </div>
+        <p>following the basic structure, we have the variable <span class="code code--inline">$router</span> which is an instance of the <a href="https://github.com/robsonvleite/router" class="link link--light" target="_blank">Router</a>, followed by the function with the verb name of the RESTful pattern, which are <span class="code code--inline">GET, POST, PUT, PATCH and DELETE</span>. within the function, we have three parameters. the first one is the uri referring to the route that will be accessed,
+        the second one is the name of the controller next to the name of the method that this route will have to access, the
+        third and last is optional which is the name of the route.</p>
+        <h4 class="section__title">example</h4>
+        <div class="code__block code__block--notabs">
+          <pre class="code code--block">
+            <code>
+              $router->get('/', 'WebController:index', 'web.index');
+              $router->post('/store', 'WebController:store', 'web.store');
+              $router->put('/{id}/update', 'WebController:update', 'web.update');
+              $router->patch('/{id}/profile/{photo}', 'WebController:update', 'web.update');
+              $router->delete('/{id}', 'WebController:destroy', 'web.destroy');
+            </code>
+          </pre>
+        </div>
+        <h4 class="section__title">route parameters</h4>
+        <p></p>
         <hr />
       </section>
       <section class="js-section">
-        <h3 class="section__title">controllers</h3>
+        <h3 class="section__title"># controllers</h3>
         <p>Lorem ipsum dolor sit amet, scripta tibique indoctum sit ei, mel inani aeterno ad.</p>
         <hr />
       </section>
       <section class="js-section">
-        <h3 class="section__title">views</h3>
+        <h3 class="section__title"># views</h3>
         <p>Lorem ipsum dolor sit amet, scripta tibique indoctum sit ei, mel inani aeterno ad.</p>
         <hr />
       </section>
       <section class="js-section">
-        <h3 class="section__title">models</h3>
+        <h3 class="section__title"># models</h3>
         <p>Lorem ipsum dolor sit amet, scripta tibique indoctum sit ei, mel inani aeterno ad.</p>
         <hr />
       </section>
       <section class="js-section">
-        <h3 class="section__title">helpers</h3>
+        <h3 class="section__title"># helpers</h3>
         <p>Lorem ipsum dolor sit amet, scripta tibique indoctum sit ei, mel inani aeterno ad.</p>
         <hr />
       </section>
       <section class="js-section">
-        <h3 class="section__title">assets</h3>
-        <p>Lorem ipsum dolor sit amet, scripta tibique indoctum sit ei, mel inani aeterno ad.</p>
-        <p>Lorem ipsum dolor sit amet, scripta tibique indoctum sit ei, mel inani aeterno ad.</p>
-        <p>Lorem ipsum dolor sit amet, scripta tibique indoctum sit ei, mel inani aeterno ad.</p>
-        <p>Lorem ipsum dolor sit amet, scripta tibique indoctum sit ei, mel inani aeterno ad.</p>
-        <p>Lorem ipsum dolor sit amet, scripta tibique indoctum sit ei, mel inani aeterno ad.</p>
+        <h3 class="section__title"># assets</h3>
         <p>Lorem ipsum dolor sit amet, scripta tibique indoctum sit ei, mel inani aeterno ad.</p>
       </section>
     </article>
