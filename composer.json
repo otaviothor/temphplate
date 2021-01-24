@@ -1,6 +1,6 @@
 {
-  "name": "otaviothor/template-mvc",
-  "description": "Template de estrutura MVC para projeto em PHP",
+  "name": "otaviothor/temphplate",
+  "description": "the PHP template in MVC for high-level project development",
   "minimum-stability": "stable",
   "license": "MIT",
   "authors": [
