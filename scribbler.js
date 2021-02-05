@@ -1,18 +1,18 @@
 // utilities
-var get = function (selector, scope) {
+const get = (selector, scope) => {
   scope = scope ? scope : document;
   return scope.querySelector(selector);
 };
 
-var getAll = function (selector, scope) {
+const getAll = (selector, scope) => {
   scope = scope ? scope : document;
   return scope.querySelectorAll(selector);
 };
 
 // toggle tabs on codeblock
-window.addEventListener("load", function () {
+window.addEventListener("load", () => {
   // get all tab_containers in the document
-  var tabContainers = getAll(".tab__container");
+  const tabContainers = getAll(".tab__container");
 
   // bind click event to each tab container
   for (var i = 0; i < tabContainers.length; i++) {
@@ -20,43 +20,43 @@ window.addEventListener("load", function () {
   }
 
   // each click event is scoped to the tab_container
-  function tabClick(event) {
-    var scope = event.currentTarget.parentNode;
-    var clickedTab = event.target;
-    var tabs = getAll(".tab", scope);
-    var panes = getAll(".tab__pane", scope);
-    var activePane = get(`.${clickedTab.getAttribute("data-tab")}`, scope);
+  const tabClick = (event) => {
+    const scope = event.currentTarget.parentNode;
+    const clickedTab = event.target;
+    const tabs = getAll(".tab", scope);
+    const panes = getAll(".tab__pane", scope);
+    const activePane = get(`.${clickedTab.getAttribute("data-tab")}`, scope);
 
     // remove all active tab classes
-    for (var i = 0; i < tabs.length; i++) {
+    for (let i = 0; i < tabs.length; i++) {
       tabs[i].classList.remove("active");
     }
 
     // remove all active pane classes
-    for (var i = 0; i < panes.length; i++) {
+    for (let i = 0; i < panes.length; i++) {
       panes[i].classList.remove("active");
     }
 
     // apply active classes on desired tab and pane
     clickedTab.classList.add("active");
     activePane.classList.add("active");
-  }
+  };
 });
 
 //in page scrolling for documentaiton page
-var btns = getAll(".js-btn");
-var sections = getAll(".js-section");
+const btns = getAll(".js-btn");
+const sections = getAll(".js-section");
 
-function setActiveLink(event) {
+const setActiveLink = (event) => {
   // remove all active tab classes
-  for (var i = 0; i < btns.length; i++) {
+  for (let i = 0; i < btns.length; i++) {
     btns[i].classList.remove("selected");
   }
 
   event.target.classList.add("selected");
-}
+};
 
-function smoothScrollTo(element, event) {
+smoothScrollTo = (element, event) => {
   setActiveLink(event);
 
   window.scrollTo({
@@ -64,7 +64,7 @@ function smoothScrollTo(element, event) {
     top: element.offsetTop - 20,
     left: 0,
   });
-}
+};
 
 if (btns.length && sections.length > 0) {
   // for (var i = 0; i<btns.length; i++) {
@@ -72,46 +72,46 @@ if (btns.length && sections.length > 0) {
   //     smoothScrollTo(sections[i], event);
   //   });
   // }
-  btns[0].addEventListener("click", function (event) {
+  btns[0].addEventListener("click", (event) => {
     smoothScrollTo(sections[0], event);
   });
 
-  btns[1].addEventListener("click", function (event) {
+  btns[1].addEventListener("click", (event) => {
     smoothScrollTo(sections[1], event);
   });
 
-  btns[2].addEventListener("click", function (event) {
+  btns[2].addEventListener("click", (event) => {
     smoothScrollTo(sections[2], event);
   });
 
-  btns[3].addEventListener("click", function (event) {
+  btns[3].addEventListener("click", (event) => {
     smoothScrollTo(sections[3], event);
   });
 
-  btns[4].addEventListener("click", function (event) {
+  btns[4].addEventListener("click", (event) => {
     smoothScrollTo(sections[4], event);
   });
 
-  btns[5].addEventListener("click", function (event) {
+  btns[5].addEventListener("click", (event) => {
     smoothScrollTo(sections[5], event);
   });
 
-  btns[6].addEventListener("click", function (event) {
+  btns[6].addEventListener("click", (event) => {
     smoothScrollTo(sections[6], event);
   });
 
-  btns[7].addEventListener("click", function (event) {
+  btns[7].addEventListener("click", (event) => {
     smoothScrollTo(sections[7], event);
   });
 
-  btns[8].addEventListener("click", function (event) {
+  btns[8].addEventListener("click", (event) => {
     smoothScrollTo(sections[8], event);
   });
 }
 
 // fix menu to page-top once user starts scrolling
-window.addEventListener("scroll", function () {
-  var docNav = get(".doc__nav > ul");
+window.addEventListener("scroll", () => {
+  const docNav = get(".doc__nav > ul");
 
   if (docNav) {
     if (window.pageYOffset > 63) {
@@ -123,11 +123,11 @@ window.addEventListener("scroll", function () {
 });
 
 // responsive navigation
-var topNav = get(".menu");
-var icon = get(".toggle");
+const topNav = get(".menu");
+const icon = get(".toggle");
 
-window.addEventListener("load", function () {
-  function showNav() {
+window.addEventListener("load", () => {
+  const showNav = () => {
     if (topNav.className === "menu") {
       topNav.className += " responsive";
       icon.className += " open";
@@ -135,6 +135,6 @@ window.addEventListener("load", function () {
       topNav.className = "menu";
       icon.classList.remove("open");
     }
-  }
+  };
   icon.addEventListener("click", showNav);
 });
