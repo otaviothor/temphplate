@@ -9,6 +9,6 @@ CREATE TABLE users (
   password VARCHAR(255) NOT NULL,
   forget VARCHAR(255),
   created_at TIMESTAMP DEFAULT current_TIMESTAMP(),
-  updated_at TIMESTAMP DEFAULT '0000-00-00 00:00:00',
+  updated_at TIMESTAMP DEFAULT current_TIMESTAMP(),
   PRIMARY KEY (id)
 );
