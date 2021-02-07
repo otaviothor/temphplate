@@ -9,8 +9,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="scribbler-global.css">
-  <link rel="stylesheet" href="scribbler-doc.css">
+  <link rel="stylesheet" href="global.css">
+  <link rel="stylesheet" href="docs.css">
 </head>
 
 <body>
@@ -21,8 +21,8 @@
       <div class="menu__item toggle"><span></span></div>
       <li class="menu__item"><a href="index.html" class="link link--dark"><i class="fa fa-home"></i> home</a>
       </li>
-      <li class="menu__item"><a href="https://github.com/otaviothor/temphplate" class="link link--dark" target="_blank"><i
-            class="fa fa-github"></i>
+      <li class="menu__item"><a href="https://github.com/otaviothor/temphplate" class="link link--dark"
+          target="_blank"><i class="fa fa-github"></i>
           github</a></li>
     </ul>
   </nav>
@@ -107,9 +107,12 @@
           file that defines many common environment variables. during the installation process, this file will
           automatically be copied to <span class="code code--inline">.env</span>, which is not normally sent to the
           hosting environment because it is a file with sensible information.</p>
-          <p>temPHPlate's default .env file contains basics variables ​​that may differ based on whether your application is running
-          locally or on a production web server. these values ​​can be used through the global variables <span class="code code--inline">$_ENV['NAME_OF_YOUR_VARIABLE']</span>
-           and <span class="code code--inline">$_SERVER['NAME_OF_YOUR_VARIABLE']</span>, or through function <span class="code code--inline">getenv('NAME_OF_YOUR_VARIABLE')</span>.</p>
+        <p>temPHPlate's default .env file contains basics variables ​​that may differ based on whether your application
+          is running
+          locally or on a production web server. these values ​​can be used through the global variables <span
+            class="code code--inline">$_ENV['NAME_OF_YOUR_VARIABLE']</span>
+          and <span class="code code--inline">$_SERVER['NAME_OF_YOUR_VARIABLE']</span>, or through function <span
+            class="code code--inline">getenv('NAME_OF_YOUR_VARIABLE')</span>.</p>
 
         <h4 class="section__title">basics variables</h4>
         <table id="customers">
@@ -190,9 +193,11 @@
       </section>
       <section class="js-section">
         <h3 class="section__title"># routing</h3>
-        <p>To make this easier, temPHPlate uses the <a href="https://github.com/robsonvleite/router" class="link link--light"
-            target="_blank">Router</a> PHP library. in a new temPHPlate installation, your application's root directory will contain a file called <span class="code code--inline">index.php</span> which will be
-            your project's start file. it should contain all the routes used in your project.</p>
+        <p>To make this easier, temPHPlate uses the <a href="https://github.com/robsonvleite/router"
+            class="link link--light" target="_blank">Router</a> PHP library. in a new temPHPlate installation, your
+          application's root directory will contain a file called <span class="code code--inline">index.php</span> which
+          will be
+          your project's start file. it should contain all the routes used in your project.</p>
         <h4 class="section__title">basic structure</h4>
         <div class="code__block code__block--notabs">
           <pre class="code code--block">
@@ -201,9 +206,15 @@
             </code>
           </pre>
         </div>
-        <p>following the basic structure, we have the variable <span class="code code--inline">$router</span> which is an instance of the <a href="https://github.com/robsonvleite/router" class="link link--light" target="_blank">Router</a>, followed by the function with the verb name of the RESTful pattern, which are <span class="code code--inline">GET, POST, PUT, PATCH and DELETE</span>. within the function, we have three parameters. the first one is the uri referring to the route that will be accessed,
-        the second one is the name of the controller next to the name of the method that this route will have to access, the
-        third and last is optional which is the name of the route.</p>
+        <p>following the basic structure, we have the variable <span class="code code--inline">$router</span> which is
+          an instance of the <a href="https://github.com/robsonvleite/router" class="link link--light"
+            target="_blank">Router</a>, followed by the function with the verb name of the RESTful pattern, which are
+          <span class="code code--inline">GET, POST, PUT, PATCH and DELETE</span>. within the function, we have three
+          parameters. the first one is the uri referring to the route that will be accessed,
+          the second one is the name of the controller next to the name of the method that this route will have to
+          access, the
+          third and last is optional which is the name of the route.
+        </p>
         <h4 class="section__title">example</h4>
         <div class="code__block code__block--notabs">
           <pre class="code code--block">
@@ -253,7 +264,7 @@
       target="_blank">otávio silva</a> for developers</footer>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
   <script>hljs.initHighlightingOnLoad();</script>
-  <script src="scribbler.js"></script>
+  <script src="scripts.js"></script>
 </body>
 
 </html>
