@@ -1,6 +1,6 @@
 {
   "name": "otaviothor/temphplate",
-  "description": "the PHP template in MVC for high-level project development",
+  "description": "a simple and lightweight PHP framework in MVC for web development",
   "minimum-stability": "stable",
   "license": "MIT",
   "authors": [
@@ -14,8 +14,8 @@
       "Src\\": "src/"
     },
     "files": [
-      "src/Config.php",
-      "src/Helpers.php"
+      "src/Config/Config.php",
+      "src/Config/Helpers.php"
     ]
   },
   "scripts": {

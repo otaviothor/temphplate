@@ -2,7 +2,7 @@
 
 use Dotenv\Dotenv;
 
-$dotenv = Dotenv::createImmutable(__DIR__ . "/..");
+$dotenv = Dotenv::createImmutable(__DIR__ . "/../..");
 $dotenv->load();
 
 /** Constant with info about project */
