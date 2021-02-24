@@ -7,8 +7,10 @@ body {
 
 /* layout */
 .header {
-  border-bottom: 1px solid var(--code-bg-color);
-  grid-template-columns: 1fr 190px 60% 1fr;
+  display: flex;
+  justify-content: space-between;
+  max-width: 70%;
+  margin-left: 15%;
 }
 
 .wrapper {
