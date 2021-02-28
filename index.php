@@ -1,5 +1,11 @@
 <?php
 
+$minPHP = '7.2';
+if (phpversion() < $minPHP) {
+  die("Your PHP version must be {$minPHP}. Current version: " . phpversion());
+}
+unset($minPHP);
+
 ob_start();
 session_start();
 

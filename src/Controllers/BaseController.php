@@ -9,7 +9,7 @@ use League\Plates\Engine;
  * Class Controller
  * @package Src\Controllers
  */
-abstract class Controller
+abstract class BaseController
 {
   /** @var Engine */
   protected $view;
@@ -24,7 +24,7 @@ abstract class Controller
   public function __construct($router)
   {
     $this->router = $router;
-    $this->view = Engine::create(dirname(__DIR__, 2) . "/views/site", 'php');
+    $this->view = Engine::create(dirname(__DIR__, 2) . "/resources/views", 'php');
     $this->view->addData(["router" => $this->router]);
   }
 

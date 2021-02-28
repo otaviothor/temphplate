@@ -6,7 +6,7 @@ namespace Src\Controllers;
  * Class WebController
  * @package Src\Controllers
  */
-class WebController extends Controller
+class WebController extends BaseController
 {
   /**
    * WebController constructor.
