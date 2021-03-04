@@ -1,6 +1,6 @@
 <?php
 
-namespace Src\Controllers;
+namespace Src\Core;
 
 use CoffeeCode\Router\Router;
 use League\Plates\Engine;
@@ -9,7 +9,7 @@ use League\Plates\Engine;
  * Class Controller
  * @package Src\Controllers
  */
-abstract class BaseController
+abstract class Controller
 {
   /** @var Engine */
   protected $view;
