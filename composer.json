@@ -14,7 +14,7 @@
       "Src\\": "src/"
     },
     "files": [
-      "src/Config/Config.php",
+      "src/Config/Constants.php",
       "src/Config/Helpers.php"
     ]
   },
