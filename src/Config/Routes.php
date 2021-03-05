@@ -8,17 +8,17 @@ $router->namespace("Src\Controllers");
 
 /** Routes */
 $router->group(null);
-$router->get("/", "WebController:index", "web.index");
-$router->get("/new", "WebController:create", "web.create");
-$router->post("/store", "WebController:store", "web.store");
-$router->get("/{id}", "WebController:show", "web.show");
-$router->get("/{id}/edit", "WebController:edit", "web.edit");
-$router->put("/{id}/update", "WebController:update", "web.update");
-$router->delete("/{id}", "WebController:destroy", "web.destroy");
+$router->get("/", "Web:index", "web.index");
+$router->get("/new", "Web:create", "web.create");
+$router->post("/store", "Web:store", "web.store");
+$router->get("/{id}", "Web:show", "web.show");
+$router->get("/{id}/edit", "Web:edit", "web.edit");
+$router->put("/{id}/update", "Web:update", "web.update");
+$router->delete("/{id}", "Web:destroy", "web.destroy");
 
 /** Route errors */
 $router->group("ops");
-$router->get("/{errcode}", "WebController:error", "web.error");
+$router->get("/{errcode}", "Web:error", "web.error");
 
 /** Route proccess */
 $router->dispatch();
