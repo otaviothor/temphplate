@@ -1,6 +1,6 @@
 <?php
 
-namespace Src\Core;
+namespace Src\Controllers;
 
 use CoffeeCode\Router\Router;
 use League\Plates\Engine;

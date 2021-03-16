@@ -2,13 +2,11 @@
 
 namespace Src\Controllers;
 
-use Src\Core\Controller;
-
 /**
  * Class WebController
  * @package Src\Controllers
  */
-class Web extends Controller
+class WebController extends Controller
 {
   /**
    * WebController constructor.
