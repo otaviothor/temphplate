@@ -12,7 +12,7 @@ $dotenv->load();
 /** Constant with info about project */
 define("SITE", [
   "name" => $_ENV['APP_NAME'],
-  "desc" => $_ENV['APP_DESCRIPTION'],
+  "description" => $_ENV['APP_DESCRIPTION'],
   "domain" => $_ENV['APP_DOMAIN'],
   "locale" => $_ENV['APP_LOCALE'],
   "root" => $_ENV['APP_ROOT']

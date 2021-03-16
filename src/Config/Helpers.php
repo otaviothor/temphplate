@@ -34,6 +34,5 @@ function asset(string $path, $time = true): string
  */
 function package(string $path): string
 {
-  $package = SITE["root"] . "/node_modules/{$path}";
-  return $package;
+  return SITE["root"] . "/node_modules/{$path}";
 }
