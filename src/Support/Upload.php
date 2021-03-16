@@ -11,12 +11,9 @@ use stdClass;
  */
 abstract class Upload
 {
-
   /** Upload constructor. */
   public function __construct()
   {
 
   }
-
-
 }
