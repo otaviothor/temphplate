@@ -6,12 +6,10 @@ if (!file_exists(dirname(__DIR__, 2) . "/.env")) {
 
 /** Verification if project is under development to minify assets */
 if($_SERVER["SERVER_NAME"] === "localhost") {
-  require __DIR__."/Minify.php";
+  require __DIR__ . "/Minify.php";
 }
 
 use Dotenv\Dotenv;
-
-$dotenv = Dotenv::createImmutable(dirname(__DIR__, 2));
-$dotenv->load();
+Dotenv::createImmutable(dirname(__DIR__, 2))->load();
 
 require __DIR__ . "/Routes.php";
