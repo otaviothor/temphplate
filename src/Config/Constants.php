@@ -1,14 +1,5 @@
 <?php
 
-if (!file_exists(dirname(__DIR__, 2) . "/.env")) {
-  die("Your project not exist .env file. Copy .env.example and rename it to .env");
-}
-
-use Dotenv\Dotenv;
-
-$dotenv = Dotenv::createImmutable(__DIR__ . "/../..");
-$dotenv->load();
-
 /** Constant with info about project */
 define("SITE", [
   "name" => $_ENV['APP_NAME'],
@@ -17,11 +8,6 @@ define("SITE", [
   "locale" => $_ENV['APP_LOCALE'],
   "root" => $_ENV['APP_ROOT']
 ]);
-
-/** Verification if project is under development to minify assets */
-if($_SERVER["SERVER_NAME"] === "localhost") {
-  require __DIR__."/Minify.php";
-}
 
 /** Constant for database configuration */
 define('DATA_LAYER_CONFIG', [

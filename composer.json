@@ -14,6 +14,7 @@
       "Src\\": "src/"
     },
     "files": [
+      "src/Config/Boot.php",
       "src/Config/Constants.php",
       "src/Config/Helpers.php"
     ]
