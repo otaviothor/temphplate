@@ -11,5 +11,3 @@ if($_SERVER["SERVER_NAME"] === "localhost") {
 
 use Dotenv\Dotenv;
 Dotenv::createImmutable(dirname(__DIR__, 2))->load();
-
-require __DIR__ . "/Routes.php";
