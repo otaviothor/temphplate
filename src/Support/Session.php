@@ -1,6 +1,6 @@
 <?php
 
-namespace Source\Support;
+namespace Src\Support;
 
 use Exception;
 use stdClass;
@@ -28,11 +28,11 @@ abstract class Session
 
   public function put($indexOrArray, $value = null): void
   {
-    if (sizeof($indexOrArray) > 1) {
+    if (is_array($indexOrArray)) {
       foreach ($indexOrArray as $index => $value) {
         $_SESSION[$index] = $value;
-        return;
       }
+      return;
     }
     $_SESSION[$indexOrArray] = $value;
     return;
@@ -44,12 +44,12 @@ abstract class Session
   }
 
   public function destroy($indexOrArray)
-  {
-    if (sizeof($indexOrArray) > 1) {
+   {
+    if (is_array($indexOrArray)) {
       foreach ($indexOrArray as $index) {
         unset($_SESSION[$index]);
-        return;
       }
+      return;
     }
     unset($_SESSION[$indexOrArray]);
     return;
