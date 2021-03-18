@@ -16,7 +16,8 @@
     "files": [
       "src/Config/Boot.php",
       "src/Config/Constants.php",
-      "src/Config/Helpers.php"
+      "src/Config/Helpers.php",
+      "src/Config/Routes.php"
     ]
   },
   "scripts": {
