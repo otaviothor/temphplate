@@ -33,7 +33,7 @@ abstract class Controller
    * @param array $values
    * @return string
    */
-  public function ajaxResponse(string $param, array $values): string
+  public function response(string $param, array $values): string
   {
     return json_encode([$param => $values]);
   }
