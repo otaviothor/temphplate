@@ -1,6 +1,6 @@
 <?php
 
-namespace Source\Support;
+namespace Src\Support;
 
 use Exception;
 use stdClass;

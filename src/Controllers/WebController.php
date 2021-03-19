@@ -18,7 +18,7 @@ class WebController extends Controller
   }
 
   /**
-   *
+   * Display a listing of the resource
    */
   public function index(): void
   {
@@ -28,7 +28,7 @@ class WebController extends Controller
   }
 
   /**
-   *
+   * Show the form for creating a new resource
    */
   public function create(): void
   {
@@ -36,6 +36,7 @@ class WebController extends Controller
   }
 
   /**
+   * Store a newly created resource in storage
    * @param array $data
    */
   public function store(array $data): void
@@ -44,6 +45,7 @@ class WebController extends Controller
   }
 
   /**
+   * Display the specified resource
    * @param array $data
    */
   public function show(array $data): void
@@ -52,6 +54,7 @@ class WebController extends Controller
   }
 
   /**
+   * Show the form for editing the specified resource
    * @param array $data
    */
   public function edit(array $data): void
@@ -60,6 +63,7 @@ class WebController extends Controller
   }
 
   /**
+   * Update the specified resource in storage
    * @param array $data
    */
   public function update(array $data): void
@@ -68,6 +72,7 @@ class WebController extends Controller
   }
 
   /**
+   * Remove the specified resource from storage
    * @param array $data
    */
   public function destroy(array $data): void
@@ -76,6 +81,7 @@ class WebController extends Controller
   }
 
   /**
+   * Show error page with error code
    * @param array $data
    */
   public function error(array $data): void

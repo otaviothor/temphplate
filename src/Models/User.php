@@ -9,22 +9,26 @@ namespace Src\Models;
 class User extends Model
 {
   /**
-   * @var string
-   */
+	 * Name of database table
+	 * @var string
+	 */
   protected $table = "users";
 
   /**
-   * @var string[]
-   */
+	 * Name of required fields of table table
+	 * @var string[]
+	 */
   protected $requiredFields = ["first_name", "last_name", "email", "password"];
 
   /**
-   * @var string
-   */
+	 * The table's primary key
+	 * @var string
+	 */
   protected $primaryKey = "id";
 
   /**
-   * @var bool
-   */
+	 * If table have timestamp fields(created_at and updated_at)
+	 * @var bool
+	 */
   protected $timestamps = true;
 }

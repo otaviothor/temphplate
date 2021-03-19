@@ -11,23 +11,27 @@ use CoffeeCode\DataLayer\DataLayer;
 abstract class Model extends DataLayer
 {
   /**
-   * @var
-   */
-  protected $table;
+	 * Name of database table
+	 * @var string
+	 */
+  protected $table = "";
 
   /**
-   * @var array
-   */
+	 * Name of required fields of table table
+	 * @var array
+	 */
   protected $requiredFields = [];
 
   /**
-   * @var string
-   */
+	 * The table's primary key
+	 * @var string
+	 */
   protected $primaryKey = "id";
 
   /**
-   * @var bool
-   */
+	 * If table have timestamp fields(created_at and updated_at)
+	 * @var bool
+	 */
   protected $timestamps = true;
 
   /**
