@@ -5,8 +5,15 @@ namespace Src\Support;
 use Exception;
 use stdClass;
 
+/**
+ * Class Session
+ * @package Src\Support
+ */
 abstract class Session
 {
+  /**
+   * Session constructor.
+   */
   public function __construct()
   {
     if (!session_id()) {
@@ -14,6 +21,10 @@ abstract class Session
     }
   }
 
+  /**
+   * @param string $index
+   * @return string|null
+   */
   public function get(string $index): ?string
   {
     if (!empty($_SESSION[$index])) {
@@ -22,6 +33,10 @@ abstract class Session
     return null;
   }
 
+  /**
+   * @param $indexOrArray
+   * @param null $value
+   */
   public function put($indexOrArray, $value = null): void
   {
     if (is_array($indexOrArray)) {
@@ -34,11 +49,17 @@ abstract class Session
     return;
   }
 
+  /**
+   * @return array|null
+   */
   public function all(): ?array
   {
     return $_SESSION;
   }
 
+  /**
+   * @param $indexOrArray
+   */
   public function destroy($indexOrArray): void
    {
     if (is_array($indexOrArray)) {
@@ -51,6 +72,10 @@ abstract class Session
     return;
   }
 
+  /**
+   * @param string $index
+   * @return bool
+   */
   public function exists(string $index): bool
   {
     return isset($_SESSION[$index]);

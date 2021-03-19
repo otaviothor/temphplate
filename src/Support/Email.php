@@ -6,14 +6,30 @@ use Exception;
 use PHPMailer\PHPMailer\PHPMailer;
 use stdClass;
 
-class Email
+/**
+ * Class Email
+ * @package Source\Support
+ */
+abstract class Email
 {
+  /**
+   * @var PHPMailer
+   */
   private $mail;
 
+  /**
+   * @var stdClass
+   */
   private $data;
 
+  /**
+   * @var
+   */
   private $error;
 
+  /**
+   * Email constructor.
+   */
   public function __construct()
   {
     $this->mail = new PHPMailer(true);
@@ -33,6 +49,13 @@ class Email
     $this->mail->Password = MAIL["passwd"];
   }
 
+  /**
+   * @param string $subject
+   * @param string $body
+   * @param string $recipient_name
+   * @param string $recipient_email
+   * @return $this
+   */
   public function add(string $subject, string $body, string $recipient_name, string $recipient_email): Email
   {
     $this->data->subject = $subject;
@@ -42,12 +65,22 @@ class Email
     return $this;
   }
 
+  /**
+   * @param string $filePath
+   * @param string $fileName
+   * @return $this
+   */
   public function attach(string $filePath, string $fileName): Email
   {
     $this->data->attach[$filePath] = $fileName;
     return $this;
   }
 
+  /**
+   * @param string|mixed $from_name
+   * @param string|mixed $from_email
+   * @return bool
+   */
   public function send(string $from_name = MAIL["from_name"], string $from_email = MAIL["from_email"]): bool
   {
     try {
@@ -70,6 +103,9 @@ class Email
     }
   }
 
+  /**
+   * @return Exception|null
+   */
   public function error(): ?Exception
   {
     return $this->error;

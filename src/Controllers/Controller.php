@@ -5,12 +5,26 @@ namespace Src\Controllers;
 use CoffeeCode\Router\Router;
 use League\Plates\Engine;
 
+/**
+ * Class Controller
+ * @package Src\Controllers
+ */
 abstract class Controller
 {
+  /**
+   * @var Engine
+   */
   protected $view;
 
+  /**
+   * @var
+   */
   protected $router;
 
+  /**
+   * Controller constructor.
+   * @param $router
+   */
   public function __construct($router)
   {
     $this->router = $router;
@@ -18,6 +32,11 @@ abstract class Controller
     $this->view->addData(["router" => $this->router]);
   }
 
+  /**
+   * @param string $param
+   * @param array $values
+   * @return string
+   */
   public function response(string $param, array $values): string
   {
     return json_encode([$param => $values]);
