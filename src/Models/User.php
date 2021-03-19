@@ -2,13 +2,11 @@
 
 namespace Src\Models;
 
-use CoffeeCode\DataLayer\DataLayer;
-
 /**
  * Class User
  * @package Src\Models
  */
-class User extends DataLayer
+class User extends Model
 {
   /**
 	 * Name of database table
