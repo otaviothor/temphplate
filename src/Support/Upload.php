@@ -5,16 +5,11 @@ namespace Source\Support;
 use Exception;
 use stdClass;
 
-/**
- * Class Upload
- * @package Source\Support
- */
 abstract class Upload
 {
 
   private $path;
 
-  /** Upload constructor. */
   public function __construct(string $path)
   {
     $this->path = SITE["root"] . "/storage/{$path}/";

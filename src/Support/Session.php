@@ -5,10 +5,6 @@ namespace Src\Support;
 use Exception;
 use stdClass;
 
-/**
- * Class Session
- * @package Source\Support
- */
 abstract class Session
 {
   public function __construct()
@@ -43,7 +39,7 @@ abstract class Session
     return $_SESSION;
   }
 
-  public function destroy($indexOrArray)
+  public function destroy($indexOrArray): void
    {
     if (is_array($indexOrArray)) {
       foreach ($indexOrArray as $index) {
