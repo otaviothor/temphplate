@@ -4,6 +4,7 @@ namespace Src\Controllers;
 
 use CoffeeCode\Router\Router;
 use League\Plates\Engine;
+use Src\Support\HttpStatusCode;
 
 /**
  * Class Controller
@@ -33,12 +34,26 @@ abstract class Controller
   }
 
   /**
-   * @param string $param
-   * @param array $values
+   * @param boolean $status
+   * @param integer $code
+   * @param string $message
+   * @param array $data
    * @return string
    */
-  public function response(string $param, array $values): string
+  public function response(bool $status = true, int $code = 200, string $message = null, array $data = []): string
   {
-    return json_encode([$param => $values]);
+    HttpStatusCode::setStatusCode($code);
+
+    $callback["status"] = $status;
+
+    if ($message) {
+      $callback["message"] = $message;
+    }
+
+    if (sizeof($data) > 0) {
+      $callback["data"] = $data;
+    }
+
+    return json_encode($callback);
   }
 }
